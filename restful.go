@@ -18,5 +18,5 @@ func main() {
 	r.Route(http.MethodGet,  `/v1/memory`,   memory.GetData   )
 	r.Route(http.MethodPost, `/v1/memory`,   memory.CreateData)
 
-        http.ListenAndServe(":8080", r)
+        http.ListenAndServe(":443", r)
 }
