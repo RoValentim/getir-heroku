@@ -27,7 +27,7 @@ fmt.Println("05")
 	r.Route(http.MethodPost, `/v1/memory`,   memory.CreateData)
 fmt.Println("06")
 
-        http.ListenAndServe(":"+os.GetEnv("PORT"), r)
+        http.ListenAndServe(":"+os.Getenv("PORT"), r)
 fmt.Println("07")
 fmt.Println(r)
 fmt.Println("08")
