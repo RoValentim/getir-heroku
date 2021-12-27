@@ -14,6 +14,7 @@ fmt.Println("01")
 fmt.Println("02")
 
 	r.Route(http.MethodGet, "/", func(w http.ResponseWriter, r *http.Request) {
+fmt.Println("Found main route")
 		w.Write([]byte("Working!"))
 	})
 fmt.Println("03")
