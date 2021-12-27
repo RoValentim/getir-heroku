@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"fmt"
         "net/http"
 	"rodrigo/restful/router"
@@ -26,6 +27,8 @@ fmt.Println("05")
 	r.Route(http.MethodPost, `/v1/memory`,   memory.CreateData)
 fmt.Println("06")
 
-        http.ListenAndServe(":443", r)
+        http.ListenAndServe(":"+os.GetEnv("PORT"), r)
 fmt.Println("07")
+fmt.Println(r)
+fmt.Println("08")
 }
